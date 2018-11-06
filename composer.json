@@ -1,0 +1,23 @@
+{
+    "name": "joshbrw/rss",
+    "description": "An RSS feed manager & reader.",
+    "authors": [
+        {
+            "name": "Josh Brown",
+            "email": "josh@joshbrown.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Joshbrw\\RSS\\": "src/",
+            "Joshbrw\\RSS\\Tests\\": "tests/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.2",
+        "symfony/var-dumper": "^4.1"
+    }
+}

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  php:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    image: rss_php:latest
+    networks:
+      - rss
+    volumes:
+      - .:/var/www/html
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - rss
+networks:
+  rss:
